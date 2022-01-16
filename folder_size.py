@@ -31,7 +31,7 @@ def main():
 		description="Calculate folder size",
 	)
 	parser.add_argument("path", nargs="?", default=".")
-	parser.add_argument("processes", nargs="?", default=multiprocessing.cpu_count())
+	parser.add_argument("processes", nargs="?", type=int, default=multiprocessing.cpu_count())
 
 	args = parser.parse_args()
 
